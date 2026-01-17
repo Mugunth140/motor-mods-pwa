@@ -1,1 +1,56 @@
-/* No additional app-level styles needed */
+/* App container */
+.app-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.app-content {
+    min-height: 100vh;
+}
+
+/* Update Toast */
+.update-toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(145deg, #1e1e2e 0%, #252540 100%);
+    border: 1px solid rgba(0, 212, 170, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.update-toast span {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.update-toast button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    background: linear-gradient(135deg, #00d4aa 0%, #00f5a0 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

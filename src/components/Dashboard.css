@@ -1,0 +1,334 @@
+.dashboard {
+    padding: 1rem;
+    padding-bottom: 100px;
+    /* Space for tab bar */
+}
+
+.dashboard-header {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+}
+
+.dashboard-header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    background: linear-gradient(90deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dashboard-header .subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0.25rem 0 0 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, #1e1e2e 0%, #252540 100%);
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.stat-icon.products {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+}
+
+.stat-icon.value {
+    background: rgba(0, 212, 170, 0.15);
+    color: #00d4aa;
+}
+
+.stat-icon.categories {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Section */
+.section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert-icon {
+    font-size: 1rem;
+}
+
+/* Health Grid */
+.health-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.health-item {
+    background: linear-gradient(145deg, #1e1e2e 0%, #252540 100%);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.health-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    min-width: 48px;
+}
+
+.health-item.healthy .health-value {
+    color: #00d4aa;
+}
+
+.health-item.low .health-value {
+    color: #ffa726;
+}
+
+.health-item.critical .health-value {
+    color: #e94560;
+}
+
+.health-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    flex: 1;
+}
+
+.health-bar {
+    width: 60px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.health-item.healthy .health-fill {
+    background: linear-gradient(90deg, #00d4aa, #00f5a0);
+}
+
+.health-item.low .health-fill {
+    background: linear-gradient(90deg, #ffa726, #ffcc02);
+}
+
+.health-item.critical .health-fill {
+    background: linear-gradient(90deg, #e94560, #ff6b6b);
+}
+
+/* Alert List */
+.alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.alert-item {
+    background: linear-gradient(145deg, #1e1e2e 0%, #252540 100%);
+    border-radius: 12px;
+    padding: 0.875rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid;
+}
+
+.alert-item.warning {
+    border-left-color: #ffa726;
+}
+
+.alert-item.critical {
+    border-left-color: #e94560;
+    background: linear-gradient(145deg, #2a1a1f 0%, #301820 100%);
+}
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    overflow: hidden;
+}
+
+.alert-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.alert-sku {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.alert-qty {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    flex-shrink: 0;
+}
+
+.qty-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.alert-item.warning .qty-value {
+    color: #ffa726;
+}
+
+.alert-item.critical .qty-value {
+    color: #e94560;
+}
+
+.qty-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    margin: 0 0 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Loading & Error */
+.dashboard-loading,
+.dashboard-error {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    gap: 0.75rem;
+    padding: 2rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #00d4aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dashboard-error {
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 2rem;
+}
+
+.dashboard-error h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.dashboard-error p {
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dashboard-error button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    background: linear-gradient(135deg, #00d4aa 0%, #00f5a0 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}

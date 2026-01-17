@@ -1,0 +1,239 @@
+.settings {
+    padding: 1rem;
+    padding-bottom: 100px;
+}
+
+.settings-header {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+}
+
+.settings-header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    background: linear-gradient(90deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.settings-header .subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0.25rem 0 0 0;
+}
+
+.settings-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 0.75rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.settings-card {
+    background: linear-gradient(145deg, #1e1e2e 0%, #252540 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.setting-row:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.setting-row:active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.setting-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.setting-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.setting-description {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Toggle */
+.toggle {
+    width: 48px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 2px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.toggle.enabled {
+    background: linear-gradient(135deg, #00d4aa 0%, #00f5a0 100%);
+}
+
+.toggle-knob {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle.enabled .toggle-knob {
+    transform: translateX(20px);
+}
+
+/* Update Indicator */
+.update-indicator {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00d4aa;
+}
+
+.update-indicator svg {
+    width: 24px;
+    height: 24px;
+}
+
+.update-indicator.available {
+    width: auto;
+}
+
+.update-badge {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+    border-radius: 20px;
+    animation: pulse-update 2s infinite;
+}
+
+@keyframes pulse-update {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(233, 69, 96, 0);
+    }
+}
+
+/* Threshold Control */
+.threshold-row {
+    cursor: default;
+}
+
+.threshold-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.threshold-control button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.threshold-control button:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.threshold-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    min-width: 32px;
+    text-align: center;
+}
+
+/* About */
+.about-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.app-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-details h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.25rem 0;
+}
+
+.app-details p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+}
+
+.about-description {
+    padding: 1rem;
+}
+
+.about-description p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Action Icon */
+.action-icon {
+    width: 24px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.4);
+}
