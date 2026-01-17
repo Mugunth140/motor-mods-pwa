@@ -3,14 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: var(--color-bg-light);
   padding: 2rem;
 }
 
 .blocker-content {
   text-align: center;
-  max-width: 500px;
-  color: #fff;
+  max-width: 420px;
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -19,6 +18,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -29,49 +29,36 @@
   width: 100px;
   height: 100px;
   margin: 0 auto 2rem;
-  background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+  background: var(--color-primary-500);
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 40px rgba(233, 69, 96, 0.3);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 10px 40px rgba(233, 69, 96, 0.3);
-  }
-  50% {
-    box-shadow: 0 10px 60px rgba(233, 69, 96, 0.5);
-  }
+  box-shadow: 0 10px 40px rgba(20, 184, 166, 0.25);
 }
 
 .blocker-icon svg {
   width: 50px;
   height: 50px;
-  color: #fff;
+  color: white;
 }
 
 .blocker-content h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #fff, #e0e0e0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
 }
 
 .blocker-message {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .blocker-message strong {
-  color: #e94560;
+  color: var(--color-primary-600);
 }
 
 .blocker-hint {
@@ -80,7 +67,7 @@
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-muted);
   margin-bottom: 1.5rem;
 }
 
@@ -92,36 +79,36 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
+  background: var(--color-bg-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.875rem 1rem;
   margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .url-display code {
   flex: 1;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .copy-btn {
-  background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
-  color: #fff;
+  background: var(--color-primary-500);
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, background 0.2s;
 }
 
 .copy-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+  background: var(--color-primary-600);
 }
 
 .copy-btn:active {
@@ -150,14 +137,14 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #00d4aa 0%, #00f5a0 100%);
+  background: var(--color-success);
   border-radius: 50%;
   font-weight: bold;
-  color: #1a1a2e;
+  color: white;
 }
 
 .device-supported span:last-child {
-  color: #00d4aa;
+  color: var(--color-success);
 }
 
 .device-blocked .crossmark {
@@ -166,13 +153,13 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: rgba(233, 69, 96, 0.3);
-  border: 2px solid #e94560;
+  background: #fef2f2;
+  border: 2px solid var(--color-error);
   border-radius: 50%;
   font-weight: bold;
-  color: #e94560;
+  color: var(--color-error);
 }
 
 .device-blocked span:last-child {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }

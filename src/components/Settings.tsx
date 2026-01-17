@@ -69,8 +69,11 @@ export const Settings: React.FC<SettingsProps> = ({ onCheckForUpdates, updateAva
     return (
         <div className="settings">
             <header className="settings-header">
-                <h1>Settings</h1>
-                <p className="subtitle">App Configuration</p>
+                <img src="/logo.png" alt="MotorMods" className="header-logo" />
+                <div className="header-text">
+                    <h1>Settings</h1>
+                    <p className="subtitle">App Configuration</p>
+                </div>
             </header>
 
             {/* Update Section */}
@@ -140,7 +143,7 @@ export const Settings: React.FC<SettingsProps> = ({ onCheckForUpdates, updateAva
                 <div className="settings-card">
                     <div className="about-info">
                         <div className="app-icon">
-                            <img src="/pwa-192x192.png" alt="MotorMods" />
+                            <img src="/logo.png" alt="MotorMods" />
                         </div>
                         <div className="app-details">
                             <h3>MotorMods Stock Viewer</h3>

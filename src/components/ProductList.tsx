@@ -62,8 +62,11 @@ export const ProductList: React.FC = () => {
     return (
         <div className="product-list-container">
             <header className="list-header">
-                <h1>MotorMods Inventory</h1>
-                <p className="subtitle">Real-time stock levels</p>
+                <img src="/logo.png" alt="MotorMods" className="header-logo" />
+                <div className="header-text">
+                    <h1>Inventory</h1>
+                    <p className="subtitle">Real-time stock levels</p>
+                </div>
             </header>
 
             <div className="stats-bar">

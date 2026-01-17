@@ -46,40 +46,33 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
 
             <div className="card-body">
-                {product.sku && (
+                <div className="info-section">
                     <div className="info-row">
-                        <span className="label">SKU</span>
-                        <span className="value">{product.sku}</span>
+                        <span className="label">Price:</span>
+                        <span className="value price">{formatPrice(product.price)}</span>
                     </div>
-                )}
-
-                <div className="info-row">
-                    <span className="label">Price</span>
-                    <span className="value price">{formatPrice(product.price)}</span>
+                    {product.sku && (
+                        <div className="info-row">
+                            <span className="label">SKU:</span>
+                            <span className="value">{product.sku}</span>
+                        </div>
+                    )}
                 </div>
 
-                <div className="stock-section">
-                    <div className="stock-display">
-                        <span className="stock-quantity">{product.quantity}</span>
-                        <span className="stock-label">in stock</span>
-                    </div>
+                <div className="stock-display">
+                    <span className="stock-quantity">{product.quantity}</span>
+                    <span className="stock-label">units</span>
                     <span className={`stock-badge ${getStatusColor()}`}>
                         {getStatusLabel()}
                     </span>
                 </div>
-
-                {product.reorder_level > 0 && (
-                    <div className="reorder-info">
-                        <span>Reorder at: {product.reorder_level}</span>
-                    </div>
-                )}
             </div>
 
             {product.fsn_classification && (
                 <div className={`fsn-badge fsn-${product.fsn_classification.toLowerCase()}`}>
-                    {product.fsn_classification === 'F' && 'Fast Moving'}
-                    {product.fsn_classification === 'S' && 'Slow Moving'}
-                    {product.fsn_classification === 'N' && 'Non-Moving'}
+                    {product.fsn_classification === 'F' && 'Fast'}
+                    {product.fsn_classification === 'S' && 'Slow'}
+                    {product.fsn_classification === 'N' && 'Non'}
                 </div>
             )}
         </div>
