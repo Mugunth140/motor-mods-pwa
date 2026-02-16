@@ -101,6 +101,12 @@
     color: var(--color-primary-600);
 }
 
+.info-row .value.wholesale-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7c3aed;
+}
+
 .stock-display {
     text-align: right;
 }

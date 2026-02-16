@@ -48,9 +48,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <div className="card-body">
                 <div className="info-section">
                     <div className="info-row">
-                        <span className="label">Price:</span>
+                        <span className="label">Retail:</span>
                         <span className="value price">{formatPrice(product.price)}</span>
                     </div>
+                    {product.wholesale_price > 0 && (
+                        <div className="info-row">
+                            <span className="label">Wholesale:</span>
+                            <span className="value price wholesale-price">{formatPrice(product.wholesale_price)}</span>
+                        </div>
+                    )}
                     {product.sku && (
                         <div className="info-row">
                             <span className="label">SKU:</span>

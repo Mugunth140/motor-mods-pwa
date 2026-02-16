@@ -10,6 +10,7 @@ export interface Product {
     quantity: number;
     barcode: string | null;
     purchase_price: number;
+    wholesale_price: number;
     reorder_level: number;
     max_stock: number | null;
     last_sale_date: string | null;
